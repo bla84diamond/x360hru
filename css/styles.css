@@ -1,1 +1,38 @@
- 
+/* Базовый сброс */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+  }
+  
+  .header {
+    background: #1a1a1a;
+    padding: 1rem;
+  }
+  
+  .logo img {
+    max-width: 200px;
+  }
+  
+  .menu {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
+  
+  .menu a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .hero {
+    text-align: center;
+    padding: 4rem 1rem;
+    background: url('../images/backgrounds/main-bg.jpg') center/cover;
+    color: white;
+  }
