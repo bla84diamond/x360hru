@@ -8,12 +8,41 @@ navToggle.addEventListener('click', () => {
 
 // Модальное окно (безопасная версия)
 const modal = (() => {
-  const modal = document.createElement('div');
-  modal.className = 'modal';
-  
-  // ... код createModal из примера выше
-  
-  return modal;
+  const createModal = () => {
+    const modal = document.createElement('div');
+    modal.className = 'modal';
+    
+    const content = document.createElement('div');
+    content.className = 'modal-content';
+    
+    const title = document.createElement('h3');
+    title.textContent = 'Вызов мастера';
+    
+    const form = document.createElement('form');
+    form.id = 'callForm';
+    
+    // Создаем элементы вручную
+    const nameInput = document.createElement('input');
+    nameInput.type = 'text';
+    nameInput.placeholder = 'Ваше имя';
+    nameInput.required = true;
+    
+    const telInput = document.createElement('input');
+    telInput.type = 'tel';
+    telInput.placeholder = 'Телефон';
+    telInput.required = true;
+    
+    const submitBtn = document.createElement('button');
+    submitBtn.type = 'submit';
+    submitBtn.textContent = 'Вызвать';
+    
+    // Собираем структуру
+    form.append(nameInput, telInput, submitBtn);
+    content.append(title, form);
+    modal.append(content);
+    
+    return modal;
+  };
 })();
 
 document.querySelectorAll('.btn-call').forEach(btn => {
