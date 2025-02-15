@@ -9,23 +9,58 @@
 <body>
   <!-- Начало шапки -->
   <header class="header">
-    <nav>
+    <div class="container">
       <a href="/" class="logo">
-        <img src="images/logos/main-logo.png" alt="x360h.ru">
+        <img src="images/logo.svg" alt="x360h.ru" width="200">
       </a>
-      <ul class="menu">
-        <li><a href="pages/catalog.html">Каталог</a></li>
-        <li><a href="pages/about.html">О нас</a></li>
-        <li><a href="pages/contacts.html">Контакты</a></li>
-      </ul>
-    </nav>
+      
+      <nav class="nav">
+        <button class="nav-toggle" aria-label="Меню">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        
+        <ul class="nav-menu">
+          <li><a href="#services">Услуги</a></li>
+          <li><a href="#advantages">Преимущества</a></li>
+          <li><a href="#gallery">Галерея</a></li>
+          <li><a href="#contacts">Контакты</a></li>
+        </ul>
+      </nav>
+      
+      <div class="header-contacts">
+        <a href="tel:+79999999999">+7 (999) 999-99-99</a>
+        <button class="btn-call">Вызвать мастера</button>
+      </div>
+    </div>
   </header>
   <!-- Основной контент -->
   <main>
     <section class="hero">
-      <h1>Ремонт игровых консолей</h1>
-      <p>Профессиональный сервис Xbox Series X|S и Xbox One</p>
-    </section>
+        <div class="container">
+          <div class="hero-content">
+            <h1>Ремонт Xbox в Москве</h1>
+            <p class="hero-subtitle">Бесплатный выезд мастера · Гарантия до 2 лет · Оригинальные запчасти</p>
+            <button class="btn btn-primary">Вызвать мастера</button>
+          </div>
+        </div>
+      </section>
+      <section id="services" class="services">
+        <div class="container">
+          <h2>Наши услуги</h2>
+          
+          <div class="services-grid">
+            <div class="service-card">
+              <img src="images/icons/repair.svg" alt="" width="60">
+              <h3>Ремонт Xbox One</h3>
+              <p>от 1500 руб.</p>
+            </div>
+            
+            <!-- Добавьте остальные услуги аналогично -->
+          </div>
+        </div>
+      </section>
   </main>
   <!-- Подвал -->
   <footer>
